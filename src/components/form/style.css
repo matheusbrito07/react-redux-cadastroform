@@ -1,0 +1,20 @@
+.container-form {
+    display: inline-block;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 200px;
+}
+
+input[type=text] {
+    padding: 2px;
+    margin: 5px;
+    min-width: 20vh;
+    border-radius: 5px;
+}
+
+.form-btn {
+    background: white;
+}
