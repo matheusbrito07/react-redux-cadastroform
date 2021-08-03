@@ -2,6 +2,7 @@ import { useState } from "react"
 import CpfCnpj from "@react-br-forms/cpf-cnpj-mask";
 import "./style.css"
 import { connect, useDispatch } from "react-redux"
+import CadastroClienteComp from "./cadastroClienteComp";
 
 
  function CadastroCliente (){
@@ -16,7 +17,10 @@ import { connect, useDispatch } from "react-redux"
         const [cpfCnpj, setCpfCnpj] = useState("");
         const [, setMask] = useState("");
         const [tipo, setTipo] = useState("");
-        
+        const handleClick =()=>{
+            dispatch({type:"SALVAR_CADASTRO",payload:{tipo,cpfCnpj}})
+            dispatch({type:"CONTROLLER_FORM", payload:"verdadeiro"})
+        }
 
         return(
             <form className="login-form">
@@ -44,7 +48,7 @@ import { connect, useDispatch } from "react-redux"
                 </div>
 
                
-                 <input onClick={()=> dispatch({type:"SALVAR_CADASTRO",payload:{tipo,cpfCnpj}})} type="button" className="btn" value="Enviar" />
+                 <input onClick={handleClick} type="button" className="btn" value="Enviar" />
                 
             </form>
          )
