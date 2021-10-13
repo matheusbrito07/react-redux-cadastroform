@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import axios from "axios";
 import reducers from "../../store/reducers";
-import { reduce } from "async";
 export default function CadastroClienteComp(){
    
     const [objCliente, setObjCliente] = useState(false)

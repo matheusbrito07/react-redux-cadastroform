@@ -19,7 +19,7 @@ export default function Form (){
     return(
         <div className="container-form-opt">
             
-            <button className="btn-form-component" onClick={()=>setRender(<CadastroClienteComp />)}>Cadastro Completo</button>
+            <div className="btn-form-component" onClick={()=>setRender(<CadastroClienteComp />)}></div>
                 {render}  
 
 
